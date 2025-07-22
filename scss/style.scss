@@ -27,9 +27,6 @@ $secondary: #a0f669;
     transition:         all $transition ease;
 }
 
-html {
-	// overflow-x: hidden;
-}
 body {
 	font-family: $font-primary;
 	background: $black;
@@ -1708,6 +1705,10 @@ textarea.form-control {
 
 }
 
+body, html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
 //### .block-21
 .block-21 {
