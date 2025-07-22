@@ -11,9 +11,81 @@ $primary: #ffbd39;
 $secondary: #a0f669;
 
 html, body {
-    overflow-x: hidden;
-    overflow-y: auto;
-}
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .js-fullheight {
+      height: auto;
+      min-height: 100vh;
+    }
+
+    @media (min-width: 768px) {
+      .js-fullheight {
+        height: 100vh;
+      }
+    }
+
+    .one-third.img {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .home-slider .slider-item {
+      display: flex;
+      align-items: center;
+      height: auto;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .slider-item .overlay {
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .slider-item .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .img-about img, .img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive project grid fix */
+    .project {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .text {
+      color: #fff;
+    }
+
+    .btn {
+      border-radius: 5px;
+    }
 
 
 @mixin border-radius($radius) {

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-<head>
-	<title>Sandhya Prajapati | Web & Graphic Designer</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Portfolio of Sandhya Prajapati, a Web & Graphic Designer with expertise in UI/UX, branding, and social media management.">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<head>
+  <title>Sandhya Prajapati | Web & Graphic Designer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sandhya Prajapati, a Web & Graphic Designer with expertise in UI/UX, branding, and social media management.">
+
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
 	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
@@ -484,31 +486,29 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
-    <script>
-
-  document.querySelectorAll('.project').forEach(item => {
-    item.addEventListener('click', function () {
-      const imageUrl = this.getAttribute('data-image');
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImage');
-      modalImg.src = imageUrl;
-      modal.style.display = 'flex';
+   <script>
+    document.querySelectorAll('.project').forEach(item => {
+      item.addEventListener('click', function () {
+        const imageUrl = this.getAttribute('data-image');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        modalImg.src = imageUrl;
+        modal.style.display = 'flex';
+      });
     });
-  });
 
+    document.getElementById('imageModal').addEventListener('click', function () {
+      this.style.display = 'none';
+    });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href'))
-        .scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-  document.getElementById('imageModal').addEventListener('click', function () {
-    this.style.display = 'none';
-  });
-</script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 
 </html>
