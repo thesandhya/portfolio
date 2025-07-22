@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+	
 <head>
-	<title>Sandhya Prajapati | Web & Graphic Designer</title>
-
+	<title>Sandhya Prajapati | Web & Graphic Designer</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Portfolio of Sandhya Prajapati, a Web & Graphic Designer with expertise in UI/UX, branding, and social media management.">
@@ -496,6 +495,15 @@
       modal.style.display = 'flex';
     });
   });
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
+  });
+});
 
   document.getElementById('imageModal').addEventListener('click', function () {
     this.style.display = 'none';

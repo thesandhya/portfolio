@@ -10,6 +10,10 @@ $darken: #232931;
 $primary: #ffbd39;
 $secondary: #a0f669;
 
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 
 @mixin border-radius($radius) {
@@ -354,6 +358,13 @@ h1, h2, h3, h4, h5,
 }
 
 //OWL CAROUSEL
+
+.owl-carousel .owl-stage-outer {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
 .owl-carousel {
 	position: relative;
 	.owl-item {
@@ -395,6 +406,13 @@ h1, h2, h3, h4, h5,
 		position: relative;
 		height: 750px;
 		z-index: 0;
+		
+		.slider-area {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    position: relative;
+}
 		.slider-item {
 			background-size: cover;
 			background-repeat: no-repeat;
